@@ -1,14 +1,22 @@
 const apiUrl = `/api/iot-ensemble/WarmQuery?includeEmulated=false`
 
-fetch(apiUrl)
-    .then( (data) => {
-        if(data.ok){
-            return data.json()
-        }
-        throw new Error('Response not ok.'); 
-    })
-    .then( dataPack => generateHtml(dataPack))
-    .catch( error => console.error('Error:', error))
+setInterval(() => {
+    fetchData();
+}, 15000);
+
+fetchData();
+
+const fetchData = () => {
+    fetch(apiUrl)
+        .then( (data) => {
+            if(data.ok){
+                return data.json()
+            }
+            throw new Error('Response not ok.'); 
+        })
+        .then( dataPack => generateHtml(dataPack))
+        .catch( error => console.error('Error:', error))
+};
 
 
 const generateHtml = (data) => {
