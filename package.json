@@ -1,6 +1,6 @@
 {
-  "name": "fathymtestera",
-  "version": "1.0.0",
+  "name": "@fathymtestera/testdata",
+  "version": "0.0.1",
   "description": "test data app",
   "main": "index.js",
   "dependencies": {
@@ -10,7 +10,8 @@
     "rimraf": "^3.0.2"
   },
   "scripts": {
-    "build": "rimraf build && mkdir build && cp index.html build/index.html -f && cp style.css build/style.css -f && cp main.js build/main.js",
+    "deploy": "npm version patch && npm run build && npm publish --access public",
+    "build": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
