@@ -1,11 +1,5 @@
 const apiUrl = `/api/iot-ensemble/WarmQuery?includeEmulated=false`
 
-setInterval(() => {
-    fetchData();
-}, 15000);
-
-fetchData();
-
 const fetchData = () => {
     fetch(apiUrl)
         .then( (data) => {
@@ -34,3 +28,9 @@ const generateHtml = (data) => {
     const dataDiv = document.querySelector('.dataReadings')
     dataDiv.innerHTML = html
 }
+
+setInterval(() => {
+    fetchData();
+}, 15000);
+
+fetchData();
