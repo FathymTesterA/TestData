@@ -12,6 +12,7 @@
   "scripts": {
     "deploy": "npm version patch && npm run build && npm publish --access public",
     "build": "",
+    "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
