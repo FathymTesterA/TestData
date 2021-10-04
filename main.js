@@ -1,5 +1,4 @@
-const apiUrl = `https://fathym-prd.azure-api.net/iot-ensemble/WarmQuery?includeEmulated=false&lcu-subscription-key=973e1d72ad5d4dd3bc82e0e41f38fbef`
-// const apiUrl = `/api/iot-ensemble/WarmQuery?includeEmulated=false`
+const apiUrl = `/api/iot-ensemble/WarmQuery?includeEmulated=false`
 
 const fetchData = () => {
     fetch(apiUrl)
